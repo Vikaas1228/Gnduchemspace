@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit Conversion </title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Unit Conversion </h1>
+  </header>
+  <nav>
+    <button class="tablink active" onclick="openTab(event, 'conversion')">Unit Conversion</button>
+    <button class="tablink" onclick="openTab(event, 'example')">Example</button>
+  </nav>
+
+  <main>
+    <section id="conversion" class="tabcontent active">
+      <form id="conversionForm">
+        <label for="quantitySelect">Select Quantity:</label>
+        <select id="quantitySelect" name="quantity">
+          <!-- General Conversions -->
+          <option value="length">Length</option>
+          <option value="mass">Mass</option>
+          <option value="temperature">Temperature</option>
+          <option value="time">Time</option>
+          <option value="area">Area</option>
+          <option value="volume">Volume</option>
+          <option value="massFlow">Mass Flow Rate</option>
+          <option value="molarFlow">Molar Flow Rate</option>
+          <option value="volumetricFlow">Volumetric Flow Rate</option>
+
+          <!-- Mechanics -->
+          <option value="velocity">Velocity</option>
+          <option value="acceleration">Acceleration</option>
+          <option value="force">Force</option>
+          <option value="momentum">Momentum</option>
+          <option value="stress">Stress</option>
+          <option value="strain">Strain</option>
+
+          <!-- Thermodynamics -->
+          <option value="heat">Heat</option>
+          <option value="enthalpy">Enthalpy</option>
+          <option value="entropy">Entropy</option>
+          <option value="gibbsFreeEnergy">Gibbs Free Energy</option>
+          <option value="helmholtzFreeEnergy">Helmholtz Free Energy</option>
+
+          <!-- Electromagnetism -->
+          <option value="current">Electric Current</option>
+          <option value="voltage">Voltage</option>
+          <option value="resistance">Resistance</option>
+          <option value="magneticField">Magnetic Field</option>
+
+          <!-- Molecular -->
+          <option value="molecularWeight">Molecular Weight</option>
+          <option value="viscosity">Viscosity</option>
+          <option value="rateOfReaction">Rate of Reaction</option>
+        </select>
+
+        <div id="unitsSection">
+          <!-- Unit conversion inputs will be dynamically inserted here -->
+        </div>
+
+        <button type="button" id="convertButton">Convert</button>
+      </form>
+
+      <div id="result" aria-live="polite"></div>
+    </section>
+
+    <section id="example" class="tabcontent">
+      <h2>Examples of Unit Conversion</h2>
+      <ul>
+        <li>Length: 1 meter = 100 centimeters</li>
+        <li>Mass: 1 kilogram = 2.20462 pounds</li>
+        <li>Temperature: 32°F = 0°C</li>
+        <li>Velocity: 1 meter/second = 3.6 kilometers/hour</li>
+        <li>Energy: 1 Joule = 0.000947817 British thermal unit (BTU)</li>
+        <li>Electric Current: 1 Ampere = 1000 milliamperes</li>
+        <li>Voltage: 1 Volt = 1000 millivolts</li>
+        <li>Viscosity: 1 poise = 0.1 Pa·s</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
